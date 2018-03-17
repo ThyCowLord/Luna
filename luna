@@ -4,17 +4,17 @@ x=0
 varnum=1
 opt1=$1
 packname=$2
-if [ "$EUID" -ne 0 ]
+if [ "$EUID" -ne 0 ];
   then echo "Must be run as root."
   exit
 fi
-if [ $opt1 == "-h" ]
+if [ $opt1 == "-h" ];
 then
 	echo '-h Show this help'
 	echo '-i Install a package from your repos'
 	echo '-a Add a Repo to list'
 fi
-if [ $opt1 == "-i" ]
+if [ $opt1 == "-i" ];
 then
 	cp /repos.txt /repobackup.txt
 	while [ x == 0 ]; do
@@ -31,7 +31,7 @@ then
 		varnum=$((var+1))
 	done
 fi
-if [ $opt1 == '-a' ]
+if [ $opt1 == '-a' ];
 then
 	echo $packname >>  /repos.txt		
 	exit
