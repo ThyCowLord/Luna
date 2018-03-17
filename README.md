@@ -2,8 +2,25 @@
 An alternative to [package-manager-here]. Basically Homebrew for Linux.
 
 ## Setup
-Simple, run this: sudo bash <(curl -s -L git.io)
+Simple, run this: 
+
+> sudo bash <(curl -s -L https://git.io/vxOze)
+
+## Adding Repos
+Execute 'sudo luna -a repo-here'
 
 ## Creating Repos and Package Formats
-Information to come!
+Simple! Make a Repo, with a folder for each app. In each app folder, include setup.sh. The format of setup.sh should be:
+
+> #!/bin/bash
+
+> wget needed-files 
+
+> sudo cp app-runner-script /usr/bin/app
+
+> sudo chmod a+x /usr/bin/app
+
+> [Other needed commands here]
+
+> exit
 
