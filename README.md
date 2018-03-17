@@ -2,9 +2,9 @@
 An alternative to [package-manager-here]. Basically Homebrew for Linux.
 
 ## Setup
-Simple, run this: 
+Simple, run this:
 
-> sudo bash <(curl -s -L https://git.io/vxOze)
+> git clone https://git.io/vxOze; cd Luna; sudo sh setup.sh
 
 ## Adding Repos
 Execute 'sudo luna -a repo-here'
