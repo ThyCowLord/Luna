@@ -1,0 +1,37 @@
+#!/bin/bash
+
+x=0
+varnum=1
+opt1=$1
+packname=$2
+if [ "$EUID" -ne 0 ]
+  then echo "Must be run as root."
+  exit
+fi
+if [ $opt1 == "-h" ]
+then
+	echo '-h Show this help'
+	echo '-i Install a package from your repos'
+	echo '-a Add a Repo to list'
+fi
+if [ $opt1 == "-i" ]
+then
+	cp /repos.txt /repobackup.txt
+	while [ x == 0 ]; do
+		
+		thing='sed -e 's/$/$packname/setup.sh/' -i /repos.txt'
+		moo=`sed -n $varnum /repos.txt`
+		ping $moo 
+		if ping ; then
+			yes | mv /repobackup.txt /repos.txt
+			sudo bash <(curl -l -S $moo)
+			x = 1
+			exit
+		fi
+		varnum=$((var+1))
+	done
+fi
+if [ $opt1 == '-a' ]
+	echo $packname >>  /repos.txt		
+	exit
+fi
