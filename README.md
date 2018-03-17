@@ -24,3 +24,4 @@ Simple! Make a Repo, with a folder for each app. In each app folder, include set
 
 > exit
 
+You can find a test repo [here](https://git.io/vxOzp)
