@@ -32,6 +32,7 @@ then
 	done
 fi
 if [ $opt1 == '-a' ]
+then
 	echo $packname >>  /repos.txt		
 	exit
 fi
