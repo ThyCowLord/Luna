@@ -1,3 +1,6 @@
+# CURRENTLY NOT WORKING
+
+
 # Luna
 An alternative to [package-manager-here]. Basically Homebrew for Linux.
 
